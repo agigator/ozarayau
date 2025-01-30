@@ -73,9 +73,6 @@
         .clicked-question {
             border-left: 2px solid #d44e06; /* Orange border */
             border-right: 2px solid #d44e06;
-        .clicked-answer {
-            border-left: 2px solid #d44e06; /* Orange border */
-            border-right: 2px solid #d44e06;
         }
     </style>
 </head>
@@ -144,7 +141,7 @@
             const answerRow = element.nextElementSibling;
             if (answerRow && answerRow.classList.contains('faq-answer')) {
                 answerRow.style.display = answerRow.style.display === 'table-row' ? 'none' : 'table-row';
-                element.classList.toggle('clicked-question','clicked-answer');
+                element.classList.toggle('clicked-question');
             }
         }
     </script>
