@@ -43,7 +43,7 @@
             width: 90%;
             max-width: 800px;
             border-collapse: collapse;
-            border-radius: 10px;
+            border-radius: 21px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
@@ -62,21 +62,17 @@
         }
         .faq-answer {
             display: none;
-            background-color: #d0d8e0; /* Lighter background color for answers */
             padding: 10px;
             margin-top: 10px;
-            border-left: 5px solid #d44e06; /* Orange border on the left */
+            
         }
 
-        .faq-answer.clicked {
-            background-color: #ff7e2e; /* Light orange background when clicked */
-            border-left: 5px solid #ff3b00; /* Brighter orange border */
-        }
         .faq-table td:hover, .website-table td:hover {
             background-color: #e0e7ef;
         }
-        .clicked {
-            background-color: red;
+        .clicked-question {
+            border-left: 2px solid #d44e06; /* Orange border */
+            border-right: 2px solid #d44e06;
         }
     </style>
 </head>
@@ -87,7 +83,6 @@
 
     <div style="height: 20px;"></div>
 
-  
     <table class="email-table">
         <thead>
             <tr><th>With your new domain, you’ll get access to professional email addresses like:</th></tr>
@@ -146,7 +141,7 @@
             const answerRow = element.nextElementSibling;
             if (answerRow && answerRow.classList.contains('faq-answer')) {
                 answerRow.style.display = answerRow.style.display === 'table-row' ? 'none' : 'table-row';
-                answerRow.classList.toggle('clicked');
+                element.classList.toggle('clicked-question');
             }
         }
     </script>
