@@ -38,7 +38,7 @@
             color: #ffffff;
             border-color: #75e0c7;
         }
-        .faq-table, .website-table {
+        .faq-table, .website-table, .email-table {
             margin: 30px auto;
             width: 90%;
             max-width: 800px;
@@ -47,14 +47,14 @@
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .faq-table th, .website-table th {
+        .faq-table th, .website-table th, .email-table th {
             background-color: #a99bff;
             color: #fff;
             padding: 15px;
             font-size: 1.2em;
             text-align: center;
         }
-        .faq-table td, .website-table td {
+        .faq-table td, .website-table td, .email-table td {
             padding: 15px;
             border-bottom: 1px solid #ddd;
             cursor: pointer;
@@ -62,8 +62,15 @@
         }
         .faq-answer {
             display: none;
-            background-color: #d0d8e0;
-            padding: 10px 15px;
+            background-color: #d0d8e0; /* Lighter background color for answers */
+            padding: 10px;
+            margin-top: 10px;
+            border-left: 5px solid #d44e06; /* Orange border on the left */
+        }
+
+        .faq-answer.clicked {
+            background-color: #ff7e2e; /* Light orange background when clicked */
+            border-left: 5px solid #ff3b00; /* Brighter orange border */
         }
         .faq-table td:hover, .website-table td:hover {
             background-color: #e0e7ef;
@@ -77,6 +84,20 @@
     <h1>This Domain is Up for Grabs!</h1>
     <p>Looking for the perfect domain? You're in the right place! Visit the link below to make it yours today.</p>
     <a href="https://www.namecheap.com" target="_blank">Buy Now on www.namecheap.com</a>
+
+    <div style="height: 20px;"></div>
+
+  
+    <table class="email-table">
+        <thead>
+            <tr><th>With your new domain, you’ll get access to professional email addresses like:</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>promotions@ozarayau.com</td></tr>
+            <tr><td>collabs@ozarayau.com</td></tr>
+            <tr><td>support@ozarayau.com</td></tr>
+        </tbody>
+    </table>
 
     <div style="height: 20px;"></div>
 
@@ -114,7 +135,7 @@
             <tr onclick="toggleAnswer(this)"><td>What’s the easiest way to set up a website with this domain?</td></tr>
             <tr class="faq-answer"><td>We recommend using Squarespace. It’s beginner-friendly, with templates and tools that make building a website simple and fast.</td></tr>
             <tr onclick="toggleAnswer(this)"><td>Why should I use Squarespace instead of the current registrar?</td></tr>
-            <tr class="faq-answer"><td>Squarespace combines website building and domain management in one place for beginners. Unlike Namecheap, Squarespace offers design tools, hosting, and customer support that makes it easy for users to create and manage their sites.</td></tr>
+            <tr class="faq-answer"><td>Squarespace combines website building and domain management in one place for beginners. Unlike Namecheap, Squarespace offers design tools, hosting, and customer support.</td></tr>
             <tr onclick="toggleAnswer(this)"><td>Can I transfer my domain to Squarespace easily?</td></tr>
             <tr class="faq-answer"><td>Yes! Squarespace has a step-by-step guide to help you move your domain and set it up with your website.</td></tr>
         </tbody>
